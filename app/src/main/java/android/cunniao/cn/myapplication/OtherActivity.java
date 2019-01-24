@@ -444,6 +444,8 @@ public class OtherActivity extends AppCompatActivity {
 //                                            } catch (Exception e) {
 //                                                e.printStackTrace();
 //                                            }
+//                                            source.close();
+//                                            sink.close();
 
 
                                             File file1 = new File(filesDir + File.separator + "测试111.doc");
