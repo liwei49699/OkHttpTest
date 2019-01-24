@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -422,9 +423,30 @@ public class OtherActivity extends AppCompatActivity {
 
                                             ResponseBody body = response.body();
                                             String filesDir = getFilePath();
+//                                            File file = new File(filesDir + File.separator + "测试222.doc");
+                                            long fileSize = body.contentLength();
+//
+//                                            BufferedSource source = body.source();
+//                                            long length = 0;
+//                                            long total = 0;
+//
+//                                            try {
+//                                                BufferedSink sink = Okio.buffer(Okio.sink(file));
+//                                                Buffer buffer = sink.buffer();
+//                                                while ((length = (source.read(buffer, 10 * 1024))) != -1){
+//                                                    sink.emit();
+//                                                    total = total + length;
+//
+//                                                    int progress = ((int)(total * 100.0 / fileSize));
+//                                                    Log.d("--TAG111--", "run: " + progress + "%");
+//                                                }
+//
+//                                            } catch (Exception e) {
+//                                                e.printStackTrace();
+//                                            }
 
-                                            File file = new File(filesDir + File.separator + "测试.doc");
 
+                                            File file1 = new File(filesDir + File.separator + "测试111.doc");
 
                                             InputStream inputStream = null;
                                             OutputStream outputStream = null;
@@ -432,11 +454,10 @@ public class OtherActivity extends AppCompatActivity {
                                             try {
                                                 byte[] fileReader = new byte[4096];
 
-                                                long fileSize = body.contentLength();
                                                 long fileSizeDownloaded = 0;
 
                                                 inputStream = body.byteStream();
-                                                outputStream = new FileOutputStream(file);
+                                                outputStream = new FileOutputStream(file1);
 
                                                 while (true) {
                                                     int read = inputStream.read(fileReader);
