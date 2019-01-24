@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.cunniao.cn.myapplication.OtherActivity">
+
+
+    <TextView
+        android:id="@+id/tv_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="GET请求"
+        android:onClick="getInfo"
+        android:gravity="center"/>
+
+    <TextView
+    android:id="@+id/tv_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="POST请求"
+    android:gravity="center"
+    android:onClick="postInfo"
+    app:layout_constraintTop_toBottomOf="@+id/tv_get"/>
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="文件download"
+        android:gravity="center"
+        android:onClick="downInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_post"/>
+
+    <TextView
+        android:id="@+id/tv_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="文件upload"
+        android:gravity="center"
+        android:onClick="upInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_download"/>
+</android.support.constraint.ConstraintLayout>
