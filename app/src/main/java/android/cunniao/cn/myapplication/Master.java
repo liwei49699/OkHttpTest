@@ -5,4 +5,6 @@ package android.cunniao.cn.myapplication;
  */
 
 public class Master {
+
+
 }
